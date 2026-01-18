@@ -1,34 +1,38 @@
-# Absolute Common Rules
+# Absolutely Common Rules
 
-- Always respond in 日本語
-- Always respond in 日本語
-- Plan in 日本語
-- Plan in 日本語
+* **MUST** Always respond in Japanese.
+* **MUST** Plan in Japanese.
 
 # Language & Reasoning
-- **[思考言語]** プランの検討や複雑な論理的推論（思考プロセス）は、精度を高めるために **英語** で実施すること
-- **[出力言語]** ユーザへの出力（チャット応答、ドキュメント、成果物）は、必ず **日本語** に翻訳して出力すること
 
-# planning
-- 新しい機能を追加する場合、必ずtestの実装、実施もplanに計画すること
-- 機能の追加、修正と合わせて、README.mdへの追記、修正も必ず検討し、必要であればplanに追加すること
-- 既存機能の修正を実施する場合、必ずテストの修正、追加、不要テストの削除をplanに追加すること
-- verificationフェーズで、必ずlint、build、および実装されているすべてのtestの実行をplanに追加すること
-- ユーザに方針（設計・影響調査結果）を提示し、承認を得るまでコードの修正は **絶対に行わない**こと
+* **[Thinking Language]** Conduct plan deliberation and complex logical reasoning (thought processes) in **English** to enhance precision.
+* **[Output Language]** All outputs to the user (chat responses, documents, deliverables) must be translated into and delivered in **Japanese**.
 
-# before implementation
-- ブランチを作成したうえで作業を進めるか、必ず私に確認すること
+# Planning
 
-# after implementation
-- 必ず、lint、build、および実装されているすべてのtestを実施し、問題が発生していないことを確認すること
-- 問題が発生したら、私に対応方針について2案以上提示し、必ず確認すること
+* When adding new features, always include the implementation and execution of tests in the plan.
+* Along with adding or modifying features, always consider updating `README.md` / `README_ja.md` and include these updates in the plan if necessary.
+* When modifying existing features, always include the modification/addition of tests and the deletion of obsolete tests in the plan.
+* In the verification phase, always include the execution of linting, building, and all implemented tests in the plan.
+* **NEVER** modify code until the policy (design/impact investigation results) has been presented to the user and their approval has been obtained.
 
-# その他
+# Before Implementation
 
-## コマンド実行 (Command Execution)
-- **[Git結合制限]** `git` コマンドと **Git以外のコマンド** を `&&` で接続して実行することを禁止する（例: `npm test && git commit` は不可）。これらは性質が異なるため、予期せぬエラー時の対処や確認を確実にするために分離して実行すること。
-- **[許可]** `git` コマンド同士を `&&` で接続すること（例: `git add . && git commit`）は **許可** する。
+* Always confirm with me whether to proceed by creating a new branch or not.
 
-## Git操作関連
-- **[コミットメッセージ]** コミットメッセージは、必ず英語で記述する。
-- **[ブランチ名]** ブランチ名は、必ず英語で記述する。
+# After Implementation
+
+* Always perform linting, building, and run all implemented tests to ensure no issues have occurred.
+* If an issue occurs, present at least two options for how to handle it and always seek my confirmation.
+
+# Miscellaneous
+
+## Command Execution
+
+* **[Git Concatenation Restriction]** It is prohibited to connect a `git` command with a **non-Git command** using `&&` (e.g., `npm test && git commit` is not allowed). Since these are different in nature, they must be executed separately to ensure proper handling and verification in case of unexpected errors.
+* **[Permission]** Connecting multiple `git` commands with `&&` (e.g., `git add . && git commit`) is **permitted**.
+
+## Git Operations
+
+* **[Commit Message]** Commit messages must always be written in English.
+* **[Branch Name]** Branch names must always be written in English.
