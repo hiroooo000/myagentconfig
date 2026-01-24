@@ -12,7 +12,6 @@ This skill ensures that the implementation follows the approved plan strictly, a
 *   **Japanese Output / English Thinking**: strict adherence to user rules. Plan and reason in English for precision, but output all user-facing text (plans, messages) in Japanese.
 *   **Plan Driven**: Do NOT deviate from `implementation_plan.md` without user approval.
 *   **TDD First**: Always write or update tests BEFORE modifying the implementation code.
-*   **Small TDD Cycles**: Break down implementation into small units and iterate the TDD cycle frequently.
 *   **Staged Verification**: Verify locally (scoped) before verifying globally (regression).
 *   **Clean Finish**: Ensure all checks (lint, build, test) pass before asking for final review.
 
@@ -32,10 +31,7 @@ This skill ensures that the implementation follows the approved plan strictly, a
 2.  **GREEN (Implement)**:
     *   Modify source code to satisfy the test.
     *   Run the **Scoped Test** to confirm it passes.
-3.  **Scoped Lint (Check)**:
-    *   Run lint **ONLY** on the modified source and test files (avoid full lint for speed).
-    *   Fix any lint errors immediately.
-4.  **Refactor (Optional)**:
+3.  **Refactor (Optional)**:
     *   Clean up code while keeping tests passing.
 
 ### Phase 3: Verification (VERIFICATION Mode)
