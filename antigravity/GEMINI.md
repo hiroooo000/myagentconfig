@@ -1,9 +1,9 @@
-# Absolutely Common Rules
+# **Mandatory Rules**
 
 * **MUST** Always respond in Japanese.
 * **MUST** Plan in Japanese.
 * **Utilize Antigravity Skills:** Always prioritize and utilize skills compatible with the Antigravity environment.
-* **Mandatory Notification:** Upon task completion or when requiring user confirmation, you MUST invoke the notification skill.
+*  **Mandatory Notification:** Whenever you reach a step that requires **User Confirmation**, **Approval**, or **Input** (e.g., before critical commands, upon task completion, or when asking a question), you MUST execute the notification skill **BEFORE** waiting for the user's response.
 * **Explicit Feedback:** In addition to the notification skill, provide a clear on-screen indication. Do not complete tasks silently; ensure the user is explicitly aware of the status.
 
 
