@@ -39,7 +39,10 @@ Antigravityのユーザー通知をDiscordへ送信するスキルです。こ�
 
 ### ステップ3: 依存ライブラリのインストール
 
-(変更なし)
+```bash
+# pipが使えない場合
+sudo apt-get update && sudo apt-get install python3-requests python3-dotenv
+```
 
 ### ステップ4: Discord Webhook URLの取得
 

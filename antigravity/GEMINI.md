@@ -6,6 +6,21 @@
 *  **Mandatory Notification:** Whenever you reach a step that requires **User Confirmation**, **Approval**, or **Input** (e.g., before critical commands, upon task completion, or when asking a question), you MUST execute the notification skill **BEFORE** waiting for the user's response.
 * **Explicit Feedback:** In addition to the notification skill, provide a clear on-screen indication. Do not complete tasks silently; ensure the user is explicitly aware of the status.
 
+# Command Authorization & Notification Protocol
+
+**CRITICAL RULE: Pre-Authorization Notification**
+
+Whenever you intend to propose a command for execution that requires user permission, you are **STRICTLY REQUIRED** to execute the `notification skill` **IMMEDIATELY BEFORE** presenting the command or asking for approval.
+
+**Execution Order:**
+1.  **IDENTIFY**: Determine that a command needs to be executed.
+2.  **NOTIFY**: Execute `python3 notification/scripts/notify_skill.py "Antigravity" "Waiting for command approval..."`
+3.  **ASK**: Present the command to the user and request permission.
+
+**Constraint:**
+You are **FORBIDDEN** from asking for command permission silently. The user must receive a notification *before* seeing the command prompt on the screen.
+
+
 
 # Language & Reasoning
 
