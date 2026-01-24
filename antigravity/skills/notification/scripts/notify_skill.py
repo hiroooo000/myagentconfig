@@ -33,9 +33,8 @@ def send_notification(message: str, is_error: bool = False) -> str:
         print(error_msg)
         return error_msg
 
-    # エラー時はメンションをつけて強調
     # Discordでは @everyone で全員メンション
-    prefix = "@everyone 🚨 **Attention**: \n" if is_error else ""
+    prefix = "@everyone " 
     
     payload = {
         "content": f"{prefix}{message}"
