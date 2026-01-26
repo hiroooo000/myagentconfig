@@ -73,7 +73,7 @@ https://discord.com/api/webhooks/123456789.../abcdefg...
 スキルディレクトリに移動し、`.env.example`をコピーして`.env`を作成します。
 
 ```bash
-cd /home/node/myagentflow/antigravity/skills/notification
+cd ~/.gemini/antigravity/skills/notification
 cp .env.example .env
 ```
 
@@ -122,7 +122,7 @@ NOTIFY_ANTIGRAVITY_TO_DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/..."
 #### 1. デフォルトメッセージの送信
 
 ```bash
-cd /home/node/myagentflow/antigravity/skills/notification
+cd ~/.gemini/antigravity/skills/notification
 python3 scripts/notify_skill.py
 ```
 
@@ -159,7 +159,7 @@ python3 scripts/notify_skill.py "デプロイが" "成功しました" "🎉"
 
 ```bash
 # 現在のディレクトリに関係なく実行できる
-python3 /home/node/myagentflow/antigravity/skills/notification/scripts/notify_skill.py "メッセージ"
+python3 ~/.gemini/antigravity/skills/notification/scripts/notify_skill.py "メッセージ"
 ```
 
 #### パターンB: シェルスクリプトから呼び出し
@@ -171,9 +171,9 @@ python3 /home/node/myagentflow/antigravity/skills/notification/scripts/notify_sk
 npm run build
 
 if [ $? -eq 0 ]; then
-    python3 /home/node/myagentflow/antigravity/skills/notification/scripts/notify_skill.py "ビルド成功 ✅"
+    python3 ~/.gemini/antigravity/skills/notification/scripts/notify_skill.py "ビルド成功 ✅"
 else
-    python3 /home/node/myagentflow/antigravity/skills/notification/scripts/notify_skill.py "ビルド失敗 ❌"
+    python3 ~/.gemini/antigravity/skills/notification/scripts/notify_skill.py "ビルド失敗 ❌"
 fi
 ```
 
@@ -184,7 +184,7 @@ import sys
 import os
 
 # スキルのパスを追加
-sys.path.append('/home/node/myagentflow/antigravity/skills/notification')
+sys.path.append(os.path.expanduser('~/.gemini/antigravity/skills/notification'))
 
 # インポート
 from scripts import notify_skill
@@ -213,7 +213,7 @@ print(result)
 **エラーメッセージ**:
 ```
 [Error] 環境変数 NOTIFY_ANTIGRAVITY_TO_DISCORD_WEBHOOK_URL が見つかりません。
-/home/node/myagentflow/antigravity/skills/notification/.env を確認してください。
+~/.gemini/antigravity/skills/notification/.env を確認してください。
 ```
 
 **原因と解決方法**:
@@ -312,7 +312,7 @@ chmod 644 .env
 ## ディレクトリ構造
 
 ```
-/home/node/myagentflow/antigravity/skills/notification/
+~/.gemini/antigravity/skills/notification/
 ├── SKILL.md                    # スキル定義(Antigravity用)
 ├── README.md                   # このファイル
 ├── .env                        # 環境変数(Git管理外)
