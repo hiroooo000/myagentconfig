@@ -33,12 +33,20 @@ def send_notification(message: str, is_error: bool = False) -> str:
         print(error_msg)
         return error_msg
 
-    # Discordでは @everyone で全員メンション
-    prefix = "@everyone " 
+    user_id = os.environ.get("DISCORD_USER_ID")
+
+    # メンション部分を作成 (<@12345...> という形式にする)
+    mention_text = ""
+    if user_id:
+        mention_text = f"<@{user_id}> "
     
+    # メッセージ本文を組み立てる
+    # messageには既に "[ProjectName] Body" が入っている前提
+    full_content = f"{mention_text}{message}"
+
     payload = {
-        "content": f"{prefix}{message}"
-    }
+        "content": full_content
+    }    
 
     try:
         response = requests.post(
