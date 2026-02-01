@@ -14,7 +14,7 @@ Whenever you intend to propose a command for execution that requires user permis
 
 **Execution Order:**
 1.  **IDENTIFY**: Determine that a command needs to be executed.
-2.  **NOTIFY**: Execute `python3 notification/scripts/notify_skill.py "Antigravity" "Waiting for command approval..."`
+2.  **NOTIFY**: Execute notification skill
 3.  **ASK**: Present the command to the user and request permission.
 
 **Constraint:**
@@ -55,3 +55,5 @@ You are **FORBIDDEN** from asking for command permission silently. The user must
 
 * **[Commit Message]** Commit messages must always be written in English.
 * **[Branch Name]** Branch names must always be written in English.
+* **[PR Name]** PR names must always be written in English.
+* **[PR Body]** PR bodies must always be written in English.
