@@ -17,13 +17,14 @@ This skill provides the capability to send notifications to Discord, clearly ide
 This skill requires two arguments: the **Project Name** and the **Message content**.
 
 ```bash
-python3 scripts/notify_skill.py <Project Name> <Message>
+python3 /full/path/to/scripts/notify_skill.py <Project Name> <Message>
+
 ```
 
 ### Example
 
 ```bash
-python3 scripts/notify_skill.py "Antigravity" "Build process completed successfully."
+python3 /full/path/to/scripts/notify_skill.py "Antigravity" "Build process completed successfully."
 ```
 
 ## File Structure
@@ -44,7 +45,7 @@ notification/
 ### Error: Arguments required
 
 ```
-Usage: python notify_skill.py <project_name> <message>
+Usage: python /full/path/to/script/notify_skill.py <project_name> <message>
 ```
 
 **Solution**:
